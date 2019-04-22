@@ -15,7 +15,9 @@ const forecast = (lat, long, callback) => {
           body.currently.temperature
         } degrees out. There is a ${
           body.currently.precipProbability
-        }% chance of rain.`
+        }% chance of rain. There will be a high of ${
+          body.daily.data[0].temperatureHigh
+        }° F and a low of ${body.daily.data[0].temperatureLow}° F`
       );
     }
   });
